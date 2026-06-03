@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins, sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 60px;
+
+    background-color: #f0f0f0
+}
+
+.title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+}
+
+.links {
+    color: #000;
+    text-decoration: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.cont-conteudo {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    gap: 20px;
+    
+    background-color: #ffffff;
+}
+
+.content {
+    margin: 20px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h1 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 24px;
+    text-align: justify;
+
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.container-cards {
+    display: grid;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 80px;
+    width: 100%;
+    max-width: 800px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .container-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card1 {
+        grid-column: span 2;
+    }
+}
+
+.card1 {
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card1 h3 {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.regua-container {
+      position: relative;
+      width: 100%;
+      height: 25px;
+      margin-top: 40px;
+      background: linear-gradient(to right, #3498db, #2ecc71, #f1c40f, #e74c3c);
+      border-radius: 12px;
+    }
+
+.marcador-bola {
+    position: absolute;;
+    top: -5px;
+    left: 0%;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition: left 0.6s ease;
+    transform: translateX(-50%);
+}
+
+.regua-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+}
+.grupo-input {
+  margin-bottom: 15px;
+}
+
+.grupo-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.grupo-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+
+#btnCalcular {
+    align-self: center;
+    padding: 12px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnCalcular:hover {
+  background-color: #303030;
+}
+
+#cardResultado {
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-color: #f0f0f0;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 35px;
+}
+
+#valorIMC {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+#contatoBtn {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: #000000;
+    cursor: pointer;
+}
+
+#openBtn:active {
+    opacity: 0.8;
+}
+
+.popup {
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.popup-inner {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 25px 40px;
+    width: 380px;  
+}
+
+.popup-inner h2 {
+    font-size: 1.4rem;
+    margin: 0;
+    align-self: center;
+}
+
+.popup-inner h3 {
+    margin: 0;
+    margin-top: 25px;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.popup-inner input {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.popup-inner button {
+    align-self: center;
+    padding: 12px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup-inner button:hover {
+    background-color: #303030;
+}
+
+
+
